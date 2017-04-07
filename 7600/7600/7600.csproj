@@ -1,0 +1,394 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0C9FB4B5-1701-45C7-B318-C2BE32D6AFC7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>_7600</RootNamespace>
+    <AssemblyName>7600</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AxInterop.AcroPDFLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\AxInterop.AcroPDFLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Multimedia, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Multimedia.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\Board\Scenario\SysButton.cs" />
+    <Compile Include="Classes\Board\Scenario\Buttons.cs" />
+    <Compile Include="Classes\Board\Scenario\GroupTestSignal.cs" />
+    <Compile Include="Classes\Board\Scenario\Manual.cs" />
+    <Compile Include="Classes\Board\Scenario\Periodic.cs" />
+    <Compile Include="Classes\Board\Scenario\BoardScenario.cs" />
+    <Compile Include="Classes\Board\Scenario\Test.cs" />
+    <Compile Include="Classes\Board\Signals\BoardSignals.cs" />
+    <Compile Include="Classes\Board\Signals\GET\Get_ARRAY.cs" />
+    <Compile Include="Classes\Board\Signals\SET\Set_ARRAY.cs" />
+    <Compile Include="Classes\Board\TestBoard.cs" />
+    <Compile Include="Classes\Other\BoardInfo.cs" />
+    <Compile Include="Classes\Other\BoardsInfo.cs" />
+    <Compile Include="Classes\Other\FileInfo.cs" />
+    <Compile Include="Classes\Other\FilesInfo.cs" />
+    <Compile Include="Classes\Stand\Base\BaseRS.cs" />
+    <Compile Include="Classes\Stand\Base\BaseSignal.cs" />
+    <Compile Include="Command.cs" />
+    <Compile Include="Classes\Board\Config\BoardRS.cs" />
+    <Compile Include="Classes\Board\Config\BoardConfig.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\Board\Signals\GET\Get_RS_ANALOG.cs" />
+    <Compile Include="Classes\Board\Signals\GET\Get_RS_BIT.cs" />
+    <Compile Include="Classes\Board\Signals\GET\Get_STAND_ANALOG.cs" />
+    <Compile Include="Classes\Board\Signals\GET\Get_STAND_BIT.cs" />
+    <Compile Include="Classes\Stand\Base\GroupSignals.cs" />
+    <Compile Include="Classes\Stand\Base\iBase.cs" />
+    <Compile Include="frm7192.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm7192.Designer.cs">
+      <DependentUpon>frm7192.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBoardShowPDF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBoardShowPDF.Designer.cs">
+      <DependentUpon>frmBoardShowPDF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBoardSignals.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBoardSignals.Designer.cs">
+      <DependentUpon>frmBoardSignals.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmChooseCheckDevice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmChooseCheckDevice.Designer.cs">
+      <DependentUpon>frmChooseCheckDevice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCurrents.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCurrents.Designer.cs">
+      <DependentUpon>frmCurrents.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmFunc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFunc.Designer.cs">
+      <DependentUpon>frmFunc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmHelpBoard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHelpBoard.Designer.cs">
+      <DependentUpon>frmHelpBoard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmListBoard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmListBoard.Designer.cs">
+      <DependentUpon>frmListBoard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLog.Designer.cs">
+      <DependentUpon>frmLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogo.Designer.cs">
+      <DependentUpon>frmLogo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMainWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMainWindow.Designer.cs">
+      <DependentUpon>frmMainWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="iConnect.cs" />
+    <Compile Include="Classes\Board\Signals\GET\iGet.cs" />
+    <Compile Include="Classes\Board\Signals\SET\iSet.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings.Designer.cs">
+      <DependentUpon>Settings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsXML.cs" />
+    <Compile Include="Classes\Board\Signals\SET\Set_RS_ANALOG.cs" />
+    <Compile Include="Classes\Board\Signals\SET\Set_RS_BIT.cs" />
+    <Compile Include="Classes\Board\Signals\SET\Set_STAND_ANALOG.cs" />
+    <Compile Include="Classes\Board\Signals\SET\Set_STAND_BIT.cs" />
+    <Compile Include="Classes\Stand\StandSignals.cs" />
+    <Compile Include="Classes\Board\Signals\BoardSignal.cs" />
+    <Compile Include="TypingText.cs" />
+    <Compile Include="Udp.cs" />
+    <Compile Include="Utils.cs" />
+    <Compile Include="XMLParser.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm7192.resx">
+      <DependentUpon>frm7192.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBoardShowPDF.resx">
+      <DependentUpon>frmBoardShowPDF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBoardSignals.resx">
+      <DependentUpon>frmBoardSignals.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmChooseCheckDevice.resx">
+      <DependentUpon>frmChooseCheckDevice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCurrents.resx">
+      <DependentUpon>frmCurrents.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFunc.resx">
+      <DependentUpon>frmFunc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHelpBoard.resx">
+      <DependentUpon>frmHelpBoard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmListBoard.resx">
+      <DependentUpon>frmListBoard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLog.resx">
+      <DependentUpon>frmLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogo.resx">
+      <DependentUpon>frmLogo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMainWindow.resx">
+      <DependentUpon>frmMainWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings.resx">
+      <DependentUpon>Settings.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\4.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\123.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo-big.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cross.cur" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Usil.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SHPZ.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UPZ.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Polar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Focus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TV_TPV.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\indTV.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\indTPV.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\indLD.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\indSSZ.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Calibrovka.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Diafr.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DP_TPV.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LD.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Marka.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Obogrev.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Obogrev_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TV.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vkl_vikl.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\frmMainPicture.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CalcPict.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NotepadPict.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chooseDevInitImage.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\listBoardInitmage.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PictLoadError.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\boardSignalsInitImage.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Power.png" />
+    <None Include="bin\Debug\Current.png" />
+    <Content Include="Icon.ico" />
+    <Content Include="Resources\Auto.jpg" />
+    <None Include="Resources\Current.png" />
+    <Content Include="Resources\Finish.jpg" />
+    <None Include="Resources\logo_big.bmp" />
+    <None Include="Resources\logo_big.jpg" />
+    <None Include="Resources\logo_big.png" />
+    <Content Include="Resources\PDF_file.jpg" />
+    <Content Include="Resources\Power.jpg" />
+    <Content Include="Resources\PowerPressed.jpg" />
+    <Content Include="Resources\Stop.jpg" />
+    <Content Include="Resources\Test.jpg" />
+    <None Include="bin\Debug\Auto.jpg" />
+    <None Include="bin\Debug\Finish.jpg" />
+    <None Include="bin\Debug\Power.jpg" />
+    <None Include="bin\Debug\Stop.jpg" />
+    <None Include="bin\Debug\Stop.png" />
+    <None Include="bin\Debug\Test.jpg" />
+    <None Include="bin\Debug\PDF_file.jpg" />
+    <None Include="bin\Debug\PowerPressed.jpg" />
+    <Content Include="IconFrog.ICO" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
