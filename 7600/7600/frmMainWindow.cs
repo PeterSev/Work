@@ -35,7 +35,7 @@ namespace _7600
         public XMLParser xml;
         public StandSignals standSignals;
 
-
+        bool bRand = false;
         private SettingsXML sets;
 
         public Udp udpPU, udpPK, udpPTVC;
