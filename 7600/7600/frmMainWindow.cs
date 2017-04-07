@@ -27,7 +27,7 @@ namespace _7600
         public frmCurrents _frmCurrents;
 
         string sTitleMainForm = "7600.07.74.000-02";
-        string sVersion = "2.3_Frm4";
+        string sVersion = "2.3_Repo";
         string sFileStandSignals = "bin\\StandSignals.xml";
         string sFileSettings = "bin\\settings7600.xml";
         public string selfDiagBoardName = "Самодиагностика";
