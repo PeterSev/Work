@@ -14,7 +14,7 @@ namespace _7637_WS4
     {
         List<Board> listBoards = new List<Board>();
         public Board curBoard = null;
-
+        //new comment
 
         public frmTests _frmTests;
         public frmBZ_Help _frmBZ_Help;
